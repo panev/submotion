@@ -1,0 +1,27 @@
+@mixin rotate($rotate) {
+	transform: rotate($rotate);
+}
+
+@mixin translate($translate) {
+	transform: translate($translate);
+}
+
+@mixin scale($scale) {
+	transform: scale($scale);
+}
+
+.atom-rotate {
+	transition: 5.5s cubic-bezier(.65,.01,.35,1);
+
+	&:hover {
+		transform: rotate(960deg);
+	}
+}
+
+.atom-translate {
+	transition: 1s cubic-bezier(.65,.01,.35,1);
+
+	&:hover {
+		transform: translate(950px, 0px);
+	}
+}

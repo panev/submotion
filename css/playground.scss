@@ -1,0 +1,144 @@
+/* layouts and general stuff*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGUlEQVQIW2NkYGBIA+JZQAwHjMgcGJtCQQBkPAEG7KLCcwAAAABJRU5ErkJggg==) repeat;
+}
+
+header {
+	background-color: hotpink;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	padding: 10px 0 20px 0;
+
+	& h1 {
+		font-family: 'Pacifico', cursive;
+		color: #fff;
+		font-size: 65px;
+		font-weight: normal;
+		text-shadow:3px 3px 0px rgba(0,0,0,0.20);
+	}
+
+	& h2 {
+		@extend h1;
+		margin-top: -40px;
+		font-size: 40px;
+	}
+}
+
+.particles-holder {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+
+	& section {
+		margin: 150px 0px 0px 0px;
+		display: inline-block;
+		border-radius: 50px;
+		vertical-align: top;
+	}
+
+	& .holder {
+		padding: 40px;
+		text-align: center;
+		border: 5px dashed rgba(0,0,0,0.25);
+		width: 70%;
+	}
+
+	.notes {
+
+		padding: 10px 20px;
+		border: 2px dashed rgba(0,0,0,0.35);
+		background-color: #fff;
+		width: 20%;
+		margin-right: 5%;
+
+		& h2 {
+			text-align: center;
+			font-family: 'Pacifico', cursive;
+			color: hotpink;
+			font-size: 25px;
+			font-weight: normal;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		ul li  {
+			font-size: 15px;
+			margin-bottom: 10px;
+			line-height: 1.45em;
+		}
+
+		ul li .fa {
+			color: hotpink;
+			font-size: 1.5em;
+			margin-left: -33px;
+			margin-right: 10px;
+			position: relative;
+			top: 5px;
+		}
+
+		ul li .fa-birthday-cake {
+			color: hotpink;
+		}
+
+		ul li .fa-close {
+			color: indigo;
+		}
+
+	}
+
+}
+
+.particle {
+	min-width: 80px;
+	min-height: 80px;
+	display: inline-block;
+	margin: 20px;
+	background: indianred;
+	opacity: 0.8;
+	transition: 0.5s;
+}
+
+
+
+
+/* experiments! */
+
+.subject-1 {
+
+	& .particle {
+		background: indigo;
+		width: 120px;
+		height: 120px;
+		@extend .atom-rotate;
+	} 
+}
+
+.subject-2 {
+
+	text-align: left!important;
+
+	& .particle {
+		border-radius: 50%;
+	}
+
+}
+
+.subject-3 {
+
+	& .particle {
+		background: darkslateblue;
+		width: 160px;
+		height: 60px;
+
+		&:hover {
+			@extend .atom-rotate;
+		}
+	}
+}
