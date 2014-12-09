@@ -6,6 +6,7 @@
 
 body {
 	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGUlEQVQIW2NkYGBIA+JZQAwHjMgcGJtCQQBkPAEG7KLCcwAAAABJRU5ErkJggg==) repeat;
+	padding-bottom: 100px;
 }
 
 header {
@@ -126,19 +127,45 @@ header {
 
 	& .particle {
 		border-radius: 50%;
-	}
+		transform: scale(1.2, 0.5);
+		transform-origin: top left;
+		animation: origin-experiment 3.6s linear infinite;
 
+		&:hover {
+			@extend .origin-experiment;
+		}
+	}
 }
 
 .subject-3 {
+
+	&:hover .particle {
+		@extend .origin-experiment;
+	}
 
 	& .particle {
 		background: darkslateblue;
 		width: 160px;
 		height: 60px;
+		animation: origin-experiment 3.6s linear infinite;
+		transform-origin: top left;
 
 		&:hover {
-			@extend .atom-rotate;
+			@extend .origin-experiment;
+		}
+	}
+}
+
+.subject-4 {
+
+	& .particle {
+		background: darkslateblue;
+		width: 160px;
+		height: 60px;
+		transform: skew(20deg, -20deg);
+
+		&:hover {
+			@extend .origin-experiment;
 		}
 	}
 }

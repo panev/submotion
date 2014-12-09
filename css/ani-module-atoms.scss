@@ -25,3 +25,19 @@
 		transform: translate(950px, 0px);
 	}
 }
+
+
+@keyframes origin-experiment {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.origin-experiment  {
+	transform-origin: bottom right;
+}
+
