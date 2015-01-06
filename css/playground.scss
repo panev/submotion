@@ -159,13 +159,15 @@ header {
 .subject-4 {
 
 	& .particle {
-		background: darkslateblue;
+		background: teal;
 		width: 160px;
 		height: 60px;
-		transform: skew(20deg, -20deg);
+		@extend .scale-experiment;
+		transition: 3.5s;
+		
 
 		&:hover {
-			@extend .origin-experiment;
+			transform: rotate(960deg);
 		}
 	}
 }

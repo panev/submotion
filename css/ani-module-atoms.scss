@@ -1,6 +1,6 @@
 @mixin rotate($rotate) {
 	transform: rotate($rotate);
-}
+} 
 
 @mixin translate($translate) {
 	transform: translate($translate);
@@ -37,7 +37,24 @@
 	}
 }
 
+@keyframes scale-experiment {
+	0% {
+		transform: scaleX(1.0);
+	}
+
+	50% {
+		transform: scaleX(0.5);
+	}
+
+	100% {
+		transform: scaleX(1.0);
+	}
+}
+
 .origin-experiment  {
 	transform-origin: bottom right;
 }
 
+.scale-experiment {
+	animation: scale-experiment 1s infinite;
+}
